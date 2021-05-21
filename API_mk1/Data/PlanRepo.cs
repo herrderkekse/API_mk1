@@ -51,31 +51,6 @@ namespace API_mk1.Data
             }
         }
 
-        //Experimental
-        public Day GetDayById(string id, string day)
-        {
-            //TODO better/more secure implementation of the connection string
-            var client = new MongoClient("mongodb+srv://dbUserAdm:notSecurePSW@cluster0.nro4e.mongodb.net/sample_geospatial?retryWrites=true&w=majority");
-            var database = client.GetDatabase("training");
-            IMongoCollection<BsonDocument> _experimentalCollection = database.GetCollection<BsonDocument>("plans");
-
-
-            var obId = new ObjectId(id);
-            //var res = _experimentalCollection.Find(plan => plan.Contains<BsonElement>(new BsonElement("id", obId))).ToList();
-            var res = _experimentalCollection.Find(plan => plan.GetValue("id") == obId).ToList();
-
-            var Dic = res[0].ToBsonDocument().ToDictionary();
-            Dictionary<string, object> Days = new Dictionary<string, object>();
-            Object Day;
-            Dic.TryGetValue("days", out Day);
-            Days.TryGetValue("push", out Day);
-
-            Console.WriteLine(Day.ToString());
-           
-            return null;
-            
-        }
-
         //Post
         public void CreatePlan(Plan plan)
         {

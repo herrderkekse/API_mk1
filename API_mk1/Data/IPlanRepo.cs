@@ -13,7 +13,6 @@ namespace API_mk1.Data
         IEnumerable<Plan> GetPlans();
         IEnumerable<Plan> GetPlansByAuthorName(string author);
         Plan GetPlanById(string id);
-        Day GetDayById(string id, string day);
 
         //Post
         void CreatePlan(Plan plan);
