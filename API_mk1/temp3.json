@@ -1,0 +1,6 @@
+{
+	"author": "testuser3",
+	"name": "testname",
+	"cycle": 7,
+	"pattern": [ "push", "pull", "leg", "push", "pull", "leg", "rest" ]
+}

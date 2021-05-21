@@ -1,0 +1,275 @@
+{
+	"_id": {
+		"$oid": "606f00e0db9f9e5bc740433d"
+	},
+	"author": "testuser",
+	"cycle": {
+		"$numberInt": "7"
+	},
+	"pattern": [ "push", "pull", "leg", "push", "pull", "leg", "rest" ],
+	"days": {
+		"push": {
+			"push up": {
+				"sets": {
+					"$numberInt": "3"
+				},
+				"reps": {
+					"$numberInt": "10"
+				},
+				"weight": {
+					"$numberDouble": "0.0"
+				},
+				"unilateral": false
+			},
+			"pike push up": {
+				"sets": {
+					"$numberInt": "3"
+				},
+				"reps": {
+					"$numberInt": "10"
+				},
+				"weight": {
+					"$numberDouble": "0.0"
+				},
+				"unilateral": false
+			},
+			"dips": {
+				"sets": {
+					"$numberInt": "3"
+				},
+				"reps": {
+					"$numberInt": "10"
+				},
+				"weight": {
+					"$numberDouble": "0.0"
+				},
+				"unilateral": false
+			},
+			"military press": {
+				"sets": {
+					"$numberInt": "3"
+				},
+				"reps": {
+					"$numberInt": "10"
+				},
+				"weight": {
+					"$numberDouble": "7.0"
+				},
+				"unilateral": false
+			},
+			"lateral raises": {
+				"sets": {
+					"$numberInt": "3"
+				},
+				"reps": {
+					"$numberInt": "12"
+				},
+				"weight": {
+					"$numberDouble": "3.5"
+				},
+				"unilateral": false
+			},
+			"diamond push ups": {
+				"sets": {
+					"$numberInt": "3"
+				},
+				"reps": {
+					"$numberInt": "8"
+				},
+				"weight": {
+					"$numberDouble": "0.0"
+				},
+				"unilateral": false
+			},
+			"frensh press": {
+				"sets": {
+					"$numberInt": "3"
+				},
+				"reps": {
+					"$numberInt": "7"
+				},
+				"weight": {
+					"$numberDouble": "0.0"
+				},
+				"unilateral": false
+			}
+		},
+		"pull": {
+			"pull up": {
+				"sets": {
+					"$numberInt": "3"
+				},
+				"reps": {
+					"$numberInt": "6"
+				},
+				"weight": {
+					"$numberDouble": "0.0"
+				},
+				"unilateral": false
+			},
+			"austrailian pull up": {
+				"sets": {
+					"$numberInt": "3"
+				},
+				"reps": {
+					"$numberInt": "10"
+				},
+				"weight": {
+					"$numberDouble": "0.0"
+				},
+				"unilateral": false
+			},
+			"one arm row": {
+				"sets": {
+					"$numberInt": "5"
+				},
+				"reps": {
+					"$numberInt": "10"
+				},
+				"weight": {
+					"$numberDouble": "14.0"
+				},
+				"unilateral": true
+			},
+			"chin up": {
+				"sets": {
+					"$numberInt": "3"
+				},
+				"reps": {
+					"$numberInt": "6"
+				},
+				"weight": {
+					"$numberDouble": "0.0"
+				},
+				"unilateral": false
+			},
+			"bend over lateral raises": {
+				"sets": {
+					"$numberInt": "3"
+				},
+				"reps": {
+					"$numberInt": "12"
+				},
+				"weight": {
+					"$numberDouble": "3.5"
+				},
+				"unilateral": false
+			},
+			"bizeps curls": {
+				"set1": {
+					"reps": {
+						"$numberInt": "8"
+					},
+					"weight": {
+						"$numberDouble": "3.75"
+					},
+					"unilateral": false
+				},
+				"set2": {
+					"reps": {
+						"$numberInt": "7"
+					},
+					"weight": {
+						"$numberDouble": "3.75"
+					},
+					"unilateral": false
+				},
+				"set3": {
+					"reps": {
+						"$numberInt": "6"
+					},
+					"weight": {
+						"$numberDouble": "3.75"
+					},
+					"unilateral": false
+				}
+			}
+		},
+		"leg": {
+			"deadlifts": {
+				"sets": {
+					"$numberInt": "6"
+				},
+				"reps": {
+					"$numberInt": "15"
+				},
+				"weight": {
+					"$numberDouble": "14.0"
+				},
+				"unilateral": true
+			},
+			"rumainian split squads": {
+				"sets": {
+					"$numberInt": "4"
+				},
+				"reps": {
+					"$numberInt": "10"
+				},
+				"weight": {
+					"$numberDouble": "14.0"
+				},
+				"unilateral": false
+			},
+			"hip thrusts": {
+				"sets": {
+					"$numberInt": "3"
+				},
+				"reps": {
+					"$numberInt": "15"
+				},
+				"weight": {
+					"$numberDouble": "14.0"
+				},
+				"unilateral": true
+			},
+			"squads": {
+				"sets": {
+					"$numberInt": "3"
+				},
+				"reps": {
+					"$numberInt": "15"
+				},
+				"weight": {
+					"$numberDouble": "14.0"
+				},
+				"unilateral": false
+			},
+			"side squdas": {
+				"sets": {
+					"$numberInt": "3"
+				},
+				"reps": {
+					"$numberInt": "10"
+				},
+				"weight": {
+					"$numberDouble": "14.0"
+				},
+				"unilateral": true
+			},
+			"hamstring curls": {
+				"sets": {
+					"$numberInt": "3"
+				},
+				"reps": {
+					"$numberInt": "10"
+				},
+				"weight": {
+					"$numberDouble": "14.0"
+				},
+				"unilateral": false
+			},
+			"calf raises": {
+				"sets": {
+					"$numberInt": "3"
+				},
+				"reps": {
+					"$numberInt": "10"
+				},
+				"weight": {
+					"$numberDouble": "14.0"
+				},
+				"unilateral": true
+			}
+		}
+	}
+}
