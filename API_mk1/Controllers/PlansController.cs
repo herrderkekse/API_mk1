@@ -70,18 +70,18 @@ namespace API_mk1.Controllers
 
         //api/Plans/day/byId?id=<someId>&day=<someDay>
         [HttpGet("day/byId", Name = "GetDayByID")]
-        public ActionResult<PlanReadDto> GetDayById([FromQuery] string id, [FromQuery] string day)
+        public ActionResult<DayReadDto> GetDayById([FromQuery] string id, [FromQuery] string day)
         {
             if (!Verifier.verifyId(id))
             {
                 return BadRequest();
             }
 
-            var planItem = _repository.GetDayById(id, day);
+            var dayItem = _repository.GetDayById(id, day);
 
-            if (planItem != null)
+            if (dayItem != null)
             {
-                return Ok(_mapper.Map<PlanReadDto>(planItem));
+                return Ok(_mapper.Map<DayReadDto>(dayItem));
             }
             return NotFound();
         }
@@ -92,7 +92,7 @@ namespace API_mk1.Controllers
         [HttpPost]
         public ActionResult<PlanReadDto> CreatePlan(PlanCreateDto planCreateDto)
         {
-            Plan plan = _mapper.Map<Plan>(planCreateDto);
+            PlanModel plan = _mapper.Map<PlanModel>(planCreateDto);
 
             //verify the user Input
             var msg = Verifier.verify(plan);
@@ -127,7 +127,7 @@ namespace API_mk1.Controllers
                 return NotFound();
             }
 
-            var plan = _mapper.Map<Plan>(planUpdateDto);
+            var plan = _mapper.Map<PlanModel>(planUpdateDto);
             plan.Id = new ObjectId(id); //assigns the id from the URL to the plan.Id property
 
             //verify user input

@@ -7,6 +7,6 @@ namespace API_mk1.Data
     public interface IDbClient
     {
         //Get
-        IMongoCollection<Plan> GetPlanCollection();
+        IMongoCollection<PlanModel> GetPlanCollection();
     }
 }

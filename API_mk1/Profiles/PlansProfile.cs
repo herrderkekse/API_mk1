@@ -12,17 +12,18 @@ namespace API_mk1.Profiles
     {
         public PlansProfile()
         {
-            CreateMap<Plan, PlanReadDto>();
-            CreateMap<Exercise, ExerciseReadDto>();
+            CreateMap<PlanModel, PlanReadDto>();
+            CreateMap<ExerciseModel, ExerciseReadDto>();
+            CreateMap<DayModel, DayReadDto>();
 
-            CreateMap<PlanCreateDto, Plan>();
-            CreateMap<ExerciseCreateDto, Exercise>();
+            CreateMap<PlanCreateDto, PlanModel>();
+            CreateMap<ExerciseCreateDto, ExerciseModel>();
 
-            CreateMap<PlanUpdateDto, Plan>();
-            CreateMap<ExerciseUpdateDto, Exercise>();
+            CreateMap<PlanUpdateDto, PlanModel>();
+            CreateMap<ExerciseUpdateDto, ExerciseModel>();
 
-            CreateMap<Plan, PlanUpdateDto>();
-            CreateMap<Exercise, ExerciseUpdateDto>();
+            CreateMap<PlanModel, PlanUpdateDto>();
+            CreateMap<ExerciseModel, ExerciseUpdateDto>();
         }
 
     }

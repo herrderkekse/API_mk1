@@ -24,7 +24,7 @@ namespace API_mk1
         }
 
 
-        public static string verify(Plan plan)
+        public static string verify(PlanModel plan)
         {
             //validate the PlanCreateDto by checking if all attributes needed exist
             //return null if it is valid, else return an error message

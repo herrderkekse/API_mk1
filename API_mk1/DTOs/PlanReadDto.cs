@@ -24,6 +24,10 @@ namespace API_mk1.DTOs
         public Dictionary<string,Dictionary<string, ExerciseReadDto>>? Days { get; set; }
 
     }
+    public class DayReadDto
+    {
+        public Dictionary<string,ExerciseReadDto> Exercises { get; set; }
+    }
 
     public class ExerciseReadDto
     {
@@ -39,11 +43,4 @@ namespace API_mk1.DTOs
         [JsonProperty("unilateral")]
         public bool Unilateral { get; set; }
     }
-
-    //Experimental
-    public class DayReadDto
-    {
-        public Dictionary<string,ExerciseReadDto> Day { get; set; }
-    }
-
 }
