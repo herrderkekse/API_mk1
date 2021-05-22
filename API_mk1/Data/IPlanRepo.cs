@@ -10,15 +10,16 @@ namespace API_mk1.Data
     public interface IPlanRepo
     {
         //Get
-        IEnumerable<Plan> GetPlans();
-        IEnumerable<Plan> GetPlansByAuthorName(string author);
-        Plan GetPlanById(string id);
+        IEnumerable<PlanModel> GetPlans();
+        IEnumerable<PlanModel> GetPlansByAuthorName(string author);
+        PlanModel GetPlanById(string id);
+        DayModel GetDayById(string id, string day);
 
         //Post
-        void CreatePlan(Plan plan);
+        void CreatePlan(PlanModel plan);
 
         //Put
-        void UpdatePlan(Plan plan);
+        void UpdatePlan(PlanModel plan);
 
         //Patch
 

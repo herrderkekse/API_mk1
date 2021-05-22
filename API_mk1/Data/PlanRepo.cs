@@ -12,7 +12,7 @@ namespace API_mk1.Data
 {
     public class PlanRepo : IPlanRepo
     {
-        private readonly IMongoCollection<Plan> _collection;
+        private readonly IMongoCollection<PlanModel> _collection;
 
         public PlanRepo(IDbClient client)
         {
@@ -21,7 +21,7 @@ namespace API_mk1.Data
         
 
         //Get
-        public IEnumerable<Plan> GetPlans()
+        public IEnumerable<PlanModel> GetPlans()
         {
             //TODO add exeption handling in case the mongodb atlas server isnt responding
             var res = _collection.Find(plan => true).ToList();  //finds all plans for which true is ture, so it finds all
@@ -29,18 +29,17 @@ namespace API_mk1.Data
         }
 
 
-        public IEnumerable<Plan> GetPlansByAuthorName(string author)
+        public IEnumerable<PlanModel> GetPlansByAuthorName(string author)
         {
             var res = _collection.Find(plan => plan.Author == author).ToList();
             return res;
 
         }
 
-        public Plan GetPlanById(string id)
+        public PlanModel GetPlanById(string id)
         {  
             var obId = new ObjectId(id);
             var res = _collection.Find(plan => plan.Id == obId).ToList();
-            //var res = _collection.Find(plan => plan.Id == id).ToList();
             try
             {
                 return res[0];
@@ -51,14 +50,33 @@ namespace API_mk1.Data
             }
         }
 
+        public DayModel GetDayById(string id, string day)
+        {
+
+            var obId = new ObjectId(id);
+            var res = _collection.Find(plan => plan.Id == obId).ToList();
+
+
+            if (!res[0].Days.TryGetValue(day, out Dictionary<string, ExerciseModel> returnedDay))
+            {
+                return null;
+            }
+
+            return new DayModel()
+            {
+                Exercises = returnedDay
+            };
+        }
+
+
         //Post
-        public void CreatePlan(Plan plan)
+        public void CreatePlan(PlanModel plan)
         {
             _collection.InsertOne(plan);
         }
 
         //Put
-        public void UpdatePlan(Plan plan)
+        public void UpdatePlan(PlanModel plan)
         {
 
             _collection.ReplaceOne(p => p.Id == plan.Id, plan);

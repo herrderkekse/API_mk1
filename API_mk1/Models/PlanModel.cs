@@ -10,7 +10,7 @@ using Newtonsoft.Json;
 namespace API_mk1.Models
 {
     [BsonIgnoreExtraElements]
-    public class Plan
+    public class PlanModel
     {
         [BsonId]
         public ObjectId Id { get; set; }
@@ -26,16 +26,16 @@ namespace API_mk1.Models
 
         //[BsonIgnore]
         [BsonElement("days")]
-        public Dictionary<string, Dictionary<string, Exercise>> Days { get; set; }
+        public Dictionary<string, Dictionary<string, ExerciseModel>> Days { get; set; }
     }
 
-    public class Day
+    public class DayModel
     {
-        public Dictionary<string, Exercise> DayName { get; set; }
+        public Dictionary<string, ExerciseModel> Exercises { get; set; }
     }
 
     [BsonIgnoreExtraElements]
-    public class Exercise   //TODO doesnt work yet (well more or less)
+    public class ExerciseModel   //TODO doesnt work yet (well more or less)
     {
         [BsonElement("sets")]
         public int Sets { get; set; }
